@@ -8,15 +8,17 @@ pd.set_option('display.width', 1000)
 pd.options.display.max_columns = 1000
 pd.options.display.max_rows = 1000
 
-home_path = 'datasets/'
+home_path = 'C:/Users/ygao45/Documents/GitHub/TL4RRD/data/datasets/'
 
 def read_data(cancer_type, feature_type, target, years):
-    home_path = 'E:/PythonWorkSpace/TransferLearning-upload/data/datasets/'
+    # home_path = 'E:/PythonWorkSpace/TransferLearning-upload/data/datasets/'
     path = home_path + cancer_type + '-AA-EA-' + feature_type + '-' + target + '-' + str(years) + 'YR.mat'
     dataset = loadmat(path)
 
-    X, T, C, E, R = dataset['X'], dataset['T'][0], dataset['C'][0], dataset['E'][0], dataset['R']
+    X, T, C, E, R = dataset['X'], dataset['T'][0], dataset['C'][0], dataset['E'][0], dataset['R'][0]
     data  = {'X': X, 'T': T, 'C': C, 'E': E, 'R': R}
+
+    print(R)
     return data
 
 def get_one_race(dataset, race):
@@ -48,6 +50,8 @@ def get_n_years(dataset, years):
 
     return (X, Y.astype('int32'), R, y_sub, y_strat)
 	
-	
+
+
+dataset = read_data('MMRF', 'mRNA', 'OS', 3)
 
 

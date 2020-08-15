@@ -3,7 +3,7 @@ import pandas as pd
 import random as rn
 import os
 
-from data.preProcess import get_one_race, get_n_years, normalize_dataset
+from data.preProcess import get_one_race, get_n_years, normalize_dataset, get_dataset
 from data.tcga import read_data
 from examples.classify_util import run_mixture_cv, run_one_race_cv, run_CCSA_transfer
 from tensorflow import set_random_seed
@@ -18,7 +18,8 @@ def run_cv(cancer_type, feature_type, target, years=3):
 
     print (cancer_type, feature_type, target, years)
     # dataset = get_dataset_integ(cancer_type=cancer_type, feature_type=feature_type, target=target, groups=("WHITE", "BLACK"))
-    dataset = read_data(cancer_type, feature_type[0], target, years)
+    # dataset = read_data(cancer_type, feature_type[0], target, years)
+    dataset = get_dataset(cancer_type=cancer_type, feature_type=feature_type[0], target=target, groups=("WHITE", "BLACK"))
     dataset_w = get_one_race(dataset, 'WHITE')
     dataset_w = get_n_years(dataset_w, years)
     dataset_b = get_one_race(dataset, 'BLACK')
