@@ -1,4 +1,4 @@
-# Transfer learning for reducing health disparity arising from data inequality
+# Deep transfer learning for reducing health care disparities arising from biomedical data inequality
 
 This is the software package for implementing the methods and reproducing the results described in the manuscript [1]. The main functions of the software package include:
 
@@ -109,4 +109,4 @@ The easiest way to run the test file is bash run.sh. Download the datasets from 
 
 ## Authors
 
-Yan Gao, Yan Cui.
+Yan Gao, Yan Cui. {ygao45, ycui2}@uthsc.edu
