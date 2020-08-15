@@ -9,8 +9,7 @@ from sklearn.feature_selection import VarianceThreshold
 from sklearn.preprocessing import StandardScaler
 import scipy.io as sio
 
-home_path = 'C:/Users/ygao45/Documents/GitHub/TL4RRD/data/datasets/'
-home_path = 'C:/Users/ygao45/Documents/GitHub/TL4RRD/data/datasets/'
+home_path = os.path.dirname(__file__) + '/datasets/'
 
 def tumor_types(cancer_type):
     Map = {'GBMLGG': ['GBM', 'LGG'],

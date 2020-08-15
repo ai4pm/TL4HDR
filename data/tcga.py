@@ -8,8 +8,8 @@ pd.set_option('display.width', 1000)
 pd.options.display.max_columns = 1000
 pd.options.display.max_rows = 1000
 
-home_path = 'C:/Users/ygao45/Documents/GitHub/TL4RRD/data/datasets/'
-
+# home_path = 'C:/Users/ygao45/Documents/GitHub/TL4RRD/data/datasets/'
+home_path = os.path.dirname(__file__) + '/datasets/'
 def read_data(cancer_type, feature_type, target, years):
     # home_path = 'E:/PythonWorkSpace/TransferLearning-upload/data/datasets/'
     path = home_path + cancer_type + '-AA-EA-' + feature_type + '-' + target + '-' + str(years) + 'YR.mat'
