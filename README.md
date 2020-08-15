@@ -11,11 +11,11 @@ This is the software package for implementing the methods and reproducing the re
 
 The example folder contains the scripts for reproducing the result in Fig 3 and supplementary Fig 4.
 
-The data folder contains the script file to ensemble datasets for the 225 machine learning tasks, 224 datasets from TCGA and 1 dataset assembled from MMRF. Note, the mRNA expression of TCGA cohort can be downloaded from https://figshare.com/articles/dataset/Gao_Y_Cui_Y_2020_/12811574, and put it under the TL4RDH/data/datasets/
+The data folder contains the script file to ensemble datasets for the 225 machine learning tasks, 224 datasets from TCGA (https://portal.gdc.cancer.gov) and one dataset assembled from MMRF CoMMpass (https://themmrf.org/we-are-curing-multiple-myeloma/mmrf-commpass-study). Note, the mRNA expression data of TCGA cohort can be downloaded from https://figshare.com/articles/dataset/Gao_Y_Cui_Y_2020_/12811574, and put it under the TL4RDH/data/datasets/
 
 The model folder contains the files for deep neural network and deep transfer learning implementation.
 
-The simulation folder contains two synthetic datasets simulated from ssizeRNA (a Bioconductor package), a data sampler, and four files, for reproducing the results in Fig 4.
+The simulation folder contains two synthetic datasets simulated using ssizeRNA (a Bioconductor package), a data sampler, and four files, for reproducing the results in Fig 4.
 
 | **Entity** | **Path/location** | **Note** |
 | --- | --- | --- |
