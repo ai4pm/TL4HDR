@@ -9,7 +9,7 @@ This is the software package for implementing the methods and reproducing the re
 
 # Getting Started
 
-The example folder contains the scripts for reproducing the result in Fig 3 and extended Fig 4.
+The example folder contains the scripts for reproducing the result in Fig 3 and supplementary Fig 4.
 
 The data folder contains the script file to read the 225 datasets, 224 datasets from TCGA and 1 dataset assembled from MMRF.
 
