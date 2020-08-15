@@ -18,7 +18,6 @@ def read_data(cancer_type, feature_type, target, years):
     X, T, C, E, R = dataset['X'], dataset['T'][0], dataset['C'][0], dataset['E'][0], dataset['R'][0]
     data  = {'X': X, 'T': T, 'C': C, 'E': E, 'R': R}
 
-    print(R)
     return data
 
 def get_one_race(dataset, race):
