@@ -10,6 +10,7 @@ from sklearn.preprocessing import StandardScaler
 import scipy.io as sio
 
 home_path = 'C:/Users/ygao45/Documents/GitHub/TL4RRD/data/datasets/'
+home_path = 'C:/Users/ygao45/Documents/GitHub/TL4RRD/data/datasets/'
 
 def tumor_types(cancer_type):
     Map = {'GBMLGG': ['GBM', 'LGG'],
@@ -43,7 +44,7 @@ def get_protein(cancer_type, target='OS', groups=("WHITE", "BLACK")):
     return add_race_CT(cancer_type, df, target, groups)
 
 def get_mRNA(cancer_type, target='OS', groups=("WHITE", "BLACK")):
-    path = home_path + 'PanCanerRNA.mat'
+    path = home_path + 'mRNA.mat'
     A = loadmat(path)
     X, Y, GeneName, SampleName = A['X'].astype('float32'), A['Y'], A['GeneName'][0], A['SampleName']
     GeneName = [row[0] for row in GeneName]
