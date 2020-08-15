@@ -260,11 +260,15 @@ class MLP(object):
               **kwargs):
 
         x_train, y_train = train_data
-        if valid_data:
-            x_valid, y_valid = valid_data
-
         n_train_batches = x_train.shape[0]
         n_train_batches //= batch_size
+
+        n_val_batches = n_train_batches
+        if valid_data:
+            x_valid, y_valid = valid_data
+            n_val_batches = x_valid.shape[0]
+            n_val_batches //= batch_size
+
         best_validation_loss = numpy.inf
         best_params = None
 
@@ -286,7 +290,7 @@ class MLP(object):
 
         def validate_model():
             res = []
-            for index in range(n_train_batches):
+            for index in range(n_val_batches):
                 x_train_batch = x_valid[index * batch_size:(index + 1) * batch_size]
                 y_train_batch = y_valid[index * batch_size:(index + 1) * batch_size]
                 cost, errs, output, input = train_fn(x_train_batch, y_train_batch, 0)
