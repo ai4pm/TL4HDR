@@ -66,7 +66,6 @@ def run_cv(cancer_type, feature_type, target, years=3):
         df_w = df_w.rename(columns={"Auc": "W_ind"})
         df_b = run_one_race_cv(seed, dataset_b, **parametrs_b)
         df_b = df_b.rename(columns={"Auc": "B_ind"})
-        # df_naive = run_naive(seed, dataset)
         df_tl = run_CCSA_transfer(seed, dataset_tl, **parameters_CCSA)
 
         df1 = pd.concat([df_m, df_w['W_ind'], df_b['B_ind'], df_tl['TL_Auc']],
@@ -79,7 +78,7 @@ def run_cv(cancer_type, feature_type, target, years=3):
 
 
 def main():
-    run_cv('GBMLGG', ['Protein'], 'OS', years=3)
+    run_cv('GBMLGG', 'Protein', 'OS', years=3)
 
 if __name__ == '__main__':
     main()

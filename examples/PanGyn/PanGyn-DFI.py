@@ -3,7 +3,7 @@ import pandas as pd
 import random as rn
 import os
 
-from data.preProcess import get_one_race, get_n_years, normalize_dataset, standarize_dataset
+from data.preProcess import get_one_race, get_n_years, normalize_dataset, standarize_dataset, get_dataset
 from data.tcga import read_data
 from examples.classify_util import run_mixture_cv, run_one_race_cv, \
     run_supervised_transfer_cv
@@ -18,8 +18,8 @@ rn.seed(11111)
 def run_cv(cancer_type, feature_type, target, years=3):
 
     print (cancer_type, feature_type, target, years)
-    # dataset = get_dataset_integ(cancer_type=cancer_type, feature_type=feature_type, target=target, groups=("WHITE", "BLACK"))
-    dataset = read_data(cancer_type, feature_type[0], target, years)
+    dataset = get_dataset(cancer_type=cancer_type, feature_type=feature_type, target=target, groups=("WHITE", "BLACK"))
+    # dataset = read_data(cancer_type, feature_type[0], target, years)
     dataset = standarize_dataset(dataset)
     dataset_w = get_one_race(dataset, 'WHITE')
     dataset_w = get_n_years(dataset_w, years)
@@ -73,7 +73,7 @@ def run_cv(cancer_type, feature_type, target, years=3):
 
 def main():
     # run_cv('PanGyn', ['Protein'], 'DFI', years=3)
-    run_cv('PanGyn', ['mRNA'], 'DFI', years=5)
+    run_cv('PanGyn', 'mRNA', 'DFI', years=5)
 
 if __name__ == '__main__':
     main()
