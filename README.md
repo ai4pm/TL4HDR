@@ -105,7 +105,7 @@ The easiest way to run the test file is bash run.sh. Download the datasets from 
 
 ## References
 
-[1] Yan Gao and Yan Cui (2020) Transfer learning for reducing health disparity arising from data inequality. bioRxiv 2020.01.11.902957; doi: https://doi.org/10.1101/2020.01.11.902957
+[1] Yan Gao and Yan Cui (2020) Deep transfer learning for reducing health care disparities arising from biomedical data inequality. bioRxiv 2020.01.11.902957; doi: https://www.biorxiv.org/content/10.1101/2020.01.11.902957v3
 
 ## Authors
 
