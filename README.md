@@ -81,7 +81,7 @@ The simulation folder contains two synthetic datasets simulated using ssizeRNA (
 | Numpydoc 0.9.1 | Tidelift, Inc | [https://libraries.io/pypi/numpydoc](https://libraries.io/pypi/numpydoc) |
 | Scipy 1.2.1 | The SciPy community | [https://docs.scipy.org/doc/scipy-1.2.1/reference/](https://docs.scipy.org/doc/scipy-1.2.1/reference/) |
 | Seaborn 0.9.0 | Michael Waskom | [https://seaborn.pydata.org/installing.html](https://seaborn.pydata.org/installing.html) |
-| Sklearn 0.0 | The Python community | [https://pypi.org/project/sklearn/](https://pypi.org/project/sklearn/) |
+| Sklearn 0.20.2 | The Python community | [https://pypi.org/project/sklearn/](https://pypi.org/project/sklearn/) |
 | Skrebate 0.6 | Tidelift, Inc | [https://libraries.io/pypi/skrebate](https://libraries.io/pypi/skrebate) |
 | Theano 1.0.3 | LISA lab | [http://deeplearning.net/software/theano/install.html](http://deeplearning.net/software/theano/install.html) |
 | Keras 2.2.4 | GitHub, Inc. | [https://github.com/keras-team/keras/releases/tag/2.2.4](https://github.com/keras-team/keras/releases/tag/2.2.4) |
