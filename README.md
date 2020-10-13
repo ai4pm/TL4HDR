@@ -4,7 +4,7 @@ This is the software package for implementing the methods and reproducing the re
 
 - Train a deep neural network to predict the clinical endpoint outcomes from multi-omics data.
 - Compare the performance of multiethnic machine learning schemes.
-- Use deep transfer learning to improved machine learning model performance on data-disadvantaged racial groups.
+- Use deep transfer learning to improve machine learning model performance on data-disadvantaged racial groups.
 - Use simulation modeling to study the key factors influencing the performance of the multiethnic machine learning schemes.
 
 # Getting Started
