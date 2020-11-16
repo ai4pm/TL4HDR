@@ -4,7 +4,7 @@ This is the software package for implementing the methods and reproducing the re
 
 - Train a deep neural network to predict the clinical endpoint outcomes from multi-omics data.
 - Compare the performance of multiethnic machine learning schemes.
-- Use deep transfer learning to improved machine learning model performance on data-disadvantaged racial groups.
+- Use deep transfer learning to improve machine learning model performance on data-disadvantaged racial groups.
 - Use simulation modeling to study the key factors influencing the performance of the multiethnic machine learning schemes.
 
 # Getting Started
@@ -105,7 +105,7 @@ The easiest way to run the test file is bash run.sh. Download the datasets from 
 
 ## References
 
-[1] Yan Gao and Yan Cui (2020) Deep transfer learning for reducing health care disparities arising from biomedical data inequality. bioRxiv 2020.01.11.902957; doi: https://www.biorxiv.org/content/10.1101/2020.01.11.902957v3
+[1] Yan Gao and Yan Cui (2020) Deep transfer learning for reducing health care disparities arising from biomedical data inequality. Nature Communications 11, 5131. https://www.nature.com/articles/s41467-020-18918-3
 
 ## Authors
 
