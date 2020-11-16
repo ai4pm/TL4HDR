@@ -23,7 +23,8 @@ pd.options.display.max_rows = 1000
 def run_cv(cancer_type, feature_type, target, years=3, groups=("WHITE", "BLACK")):
 
     print (cancer_type, feature_type, target, years)
-    dataset = get_dataset_integ(cancer_type=cancer_type, feature_type=feature_type, target=target, groups=groups)
+    # dataset = get_dataset_integ(cancer_type=cancer_type, feature_type=feature_type, target=target, groups=groups)
+    dataset = get_dataset(cancer_type=cancer_type, feature_type=feature_type, target=target, groups=groups)
     if dataset['X'].shape[0] < 10: return None
     dataset = standarize_dataset(dataset)
     dataset_w = get_one_race(dataset, 'WHITE')

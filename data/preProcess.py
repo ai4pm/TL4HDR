@@ -124,6 +124,46 @@ def get_n_years(dataset, years):
 
     return (X, Y.astype('int32'), R, y_sub, y_strat)
 
+def get_dataset_integ(cancer_type, feature_type=['Protein'], target='OS', groups=("WHITE", "BLACK")):
+    datasets = []
+    for feature in feature_type:
+        fn = get_fn(feature)
+        data = fn(cancer_type, target=target, groups=groups)
+        datasets.append(data)
+
+    return merge_datasets(datasets)
+
+
+def merge_datasets(datasets):
+
+    data = datasets[0]
+    X, T, C, E, R, Samples, FeatureName = data['X'], data['T'], data['C'], data['E'], data['R'], data['Samples'], data['FeatureName']
+    df = pd.DataFrame(X, index=Samples, columns=FeatureName)
+    df['T'] = T
+    df['C'] = C
+    df['E'] = E
+    df['R'] = R
+
+    for i in range(1, len(datasets)):
+        data1 = datasets[i]
+        X1, Samples, FeatureName = data1['X'], data1['Samples'], data1['FeatureName']
+        temp = pd.DataFrame(X1, index=Samples, columns=FeatureName)
+        df = df.join(temp, how='inner')
+
+    # Packing the data and save it to the disk
+    C = df['C'].tolist()
+    R = df['R'].tolist()
+    T = df['T'].tolist()
+    E = df['E'].tolist()
+    df = df.drop(columns=['C', 'R', 'T', 'E'])
+    X = df.values
+    X = X.astype('float32')
+    data = {'X': X, 'T': np.asarray(T, dtype=np.float32),
+            'C': np.asarray(C, dtype=np.int32), 'E': np.asarray(E, dtype=np.int32),
+            'R': np.asarray(R), 'Samples': df.index.values, 'FeatureName': list(df)}
+
+    return data
+
 def normalize_dataset(data):
     X = data['X']
     data_new = {}
