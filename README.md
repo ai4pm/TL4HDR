@@ -1,11 +1,13 @@
 # Deep transfer learning for reducing health care disparities arising from biomedical data inequality
 
-This is the software package for implementing the methods and reproducing the results described in the manuscript [1]. The main functions of the software package include:
+This is the software package for implementing the methods and reproducing the results described in the paper [1]. The main functions of the software package include:
 
 - Train a deep neural network to predict the clinical endpoint outcomes from multi-omics data.
 - Compare the performance of multiethnic machine learning schemes.
 - Use deep transfer learning to improve machine learning model performance on data-disadvantaged racial groups.
 - Use simulation modeling to study the key factors influencing the performance of the multiethnic machine learning schemes.
+
+[1] Yan Gao and Yan Cui (2020) Deep transfer learning for reducing health care disparities arising from biomedical data inequality. Nature Communications 11, 5131. https://www.nature.com/articles/s41467-020-18918-3 (Supplementary Table 1 https://github.com/ai4pm/TL4HDR/blob/master/Supplementary_Table_1.xlsx)
 
 # Getting Started
 
