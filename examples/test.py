@@ -4,7 +4,7 @@ import random as rn
 import os, sys
 
 from data.preProcess import get_one_race, get_n_years, normalize_dataset, get_dataset_integ, \
-    standarize_dataset
+    standarize_dataset, get_dataset
 from examples.classify_util import run_mixture_cv, run_one_race_cv, \
     run_unsupervised_transfer_cv, run_supervised_transfer_cv, run_CCSA_transfer
 from tensorflow import set_random_seed
