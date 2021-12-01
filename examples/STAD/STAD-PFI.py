@@ -77,7 +77,7 @@ def run_cv(cancer_type, feature_type, target, years=3, groups=("WHITE", "BLACK")
 
 def main():
 
-    run_cv('STAD', 'Protein', 'DSS', years=1, groups=("WHITE", "ASIAN"))
+    run_cv('STAD', 'Protein', 'PFI', years=1, groups=("WHITE", "ASIAN"))
 
 if __name__ == '__main__':
     main()
